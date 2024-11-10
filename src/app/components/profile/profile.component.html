@@ -1,0 +1,27 @@
+<div class="profile-container" *ngIf="user">
+  <button class="logout-button" routerLink="/">Выйти</button>
+  <button class="news-button" [routerLink]="['/news', user.id]">Новости</button>
+  <button class="friends-button" [routerLink]="['/friends', user.id]">Друзья</button>
+  <button class="add-news-button" [routerLink]="['/add-news', user.id]">Добавить новость</button>
+  <button class="edit-button" [routerLink]="['/edit', user.id]">Редактировать данные</button>
+  <button class="add-friends-button" [routerLink]="['/add-friends', user.id]">Добавить/удалить друзей</button>
+  <!-- Кнопка для перехода на localhost:3000, видна только если isTrue равно true -->
+  <button *ngIf="isAdm" class="external-link-button" (click)="goToExternalLink()">Перейти в администрирование</button>
+
+  <div class="profile-photo">
+    <img style="max-width: 250px; max-height: 250px; width: auto; height: auto; border-radius: 50%;"
+         [src]="userPhoto" alt="User Photo">
+  </div>
+
+  <div class="profile-info">
+    <h2 class="text dela-gothic-one-regular">{{ user.name }}</h2>
+    <p class="text dela-gothic-one-regular"><strong>Дата рождения: </strong>{{ user.dob | date: 'dd.MM.yyyy' }}</p>
+    <p class="text dela-gothic-one-regular"><strong>Email: </strong>{{ user.email }}</p>
+    <p class="text dela-gothic-one-regular"><strong>Роль: </strong>{{ user.role }}</p>
+    <p class="text dela-gothic-one-regular"><strong>Статус: </strong>{{ user.status }}</p>
+  </div>
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  <p>{{ errorMessage }}</p>
+</div>

@@ -1,0 +1,33 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  text-align: center;
+  background-color: #ea0a91;
+  border-radius: 20px;
+  border-color: #450d73;
+  border-width: 10px;
+}
+
+.text {
+  color: white;
+}
+
+.home-button {
+  margin: auto;
+  height: 40px;
+  width: 400px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(112, 85, 97, 0.42);
+  border-radius: 20px;
+}
+
+.dela-gothic-one-regular {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

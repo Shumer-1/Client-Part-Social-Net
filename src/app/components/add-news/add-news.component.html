@@ -1,0 +1,15 @@
+<div class="add-news-container">
+  <h2 class="title dela-gothic-one-regular">Добавить новость</h2>
+  <button class="logout-button" [routerLink]="['/profile', userId]">Выйти</button>
+  <form [formGroup]="addNewsForm" (ngSubmit)="onSubmit()" class="news-form">
+    <div class="form-group">
+      <label class="dela-gothic-one-regular" for="text">Текст новости:</label>
+      <textarea style="margin: auto" id="text" formControlName="text" placeholder="Введите текст новости" rows="5"></textarea>
+      <div *ngIf="addNewsForm.get('text')?.invalid && addNewsForm.get('text')?.touched" class="error-message">
+        Текст новости должен быть не менее 5 символов.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="addNewsForm.invalid" class="submit-button">Добавить новость</button>
+  </form>
+</div>

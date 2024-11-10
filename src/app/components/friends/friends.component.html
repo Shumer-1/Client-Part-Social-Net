@@ -1,0 +1,19 @@
+<div class="friends-container">
+  <h2 class="dela-gothic-one-regular">Друзья</h2>
+  <button class="logout-button" [routerLink]="['/profile', userId]">Выйти</button>
+  <div class="friends-item" *ngIf="dataParse.length > 0; else noFriends">
+    <div *ngFor="let friend of dataParse" >
+      <h3 class="dela-gothic-one-regular">Друг</h3>
+      <div class="profile-photo">
+        <img style="margin-top: 10px;max-width: 100px; max-height: 100px; width: auto; height: auto; border-radius: 50%;"
+             [src]="'https://localhost:3000' + friend.photo" alt="User Photo">
+      </div>
+      <p class="dela-gothic-one-regular"><strong class="dela-gothic-one-regular">Имя:</strong> {{friend.name}}</p>
+      <p class="dela-gothic-one-regular"><strong class="dela-gothic-one-regular">Почта:</strong> {{ friend.email }}</p>
+      <p class="dela-gothic-one-regular"><strong class="dela-gothic-one-regular">Роль:</strong> {{ friend.role }}</p>
+    </div>
+  </div>
+  <ng-template #noFriends>
+    <p>Друзей нет</p>
+  </ng-template>
+</div>

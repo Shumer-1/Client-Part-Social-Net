@@ -1,0 +1,166 @@
+.profile-container {
+  display: flex;
+  flex-direction: column; /* Располагаем все элементы по вертикали */
+  align-items: center; /* Центрируем содержимое по горизонтали */
+  justify-content: center;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  background-color: #ea0a91;
+  border-radius: 20px;
+  border-color: #450d73;
+  border-width: 10px;
+  padding: 20px; /* Внутренние отступы */
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center; /* Центрирует изображение по горизонтали */
+  align-items: center; /* Центрирует изображение по вертикали, если понадобится */
+  margin-bottom: 20px; /* Отступ между фото и текстом */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column; /* Размещаем текстовые поля вертикально */
+  align-items: center; /* Центрируем текст по горизонтали */
+  text-align: center; /* Выравниваем текст внутри элементов по центру */
+  color: white;
+}
+
+.dela-gothic-one-regular {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #dddddd;
+}
+
+.text {
+  color: white;
+}
+
+.logout-button {
+  margin-right: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-news-button {
+  margin-right: 20px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.external-link-button {
+  margin-right: 20px;
+  position: absolute;
+  top: 130px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.news-button {
+  margin-right: 100px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.friends-button {
+  margin-right: 195px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button {
+  margin-right: 20px;
+  position: absolute;
+  top: 50px;
+  right: 170px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-friends-button {
+  margin-right: 20px;
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+
+.logout-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+
+.news-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+
+.friends-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+
+.add-news-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+.add-friends-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+
+.external-link-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+

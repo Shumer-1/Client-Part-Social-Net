@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-div {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  background-color: #7373ec;
+  text-align: center;
+}

@@ -1,0 +1,58 @@
+.news-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 800px;
+  height: 700px;
+  text-align: center;
+  background-color: #ea0a91;
+  border-radius: 20px;
+  border-color: #450d73;
+  border-width: 10px;
+}
+
+.news-item {
+  overflow-y: auto;
+  background-color: transparent;
+  max-height: 600px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.logout-button {
+  margin-right: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #d9534f; /* Цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.logout-button:hover {
+  background-color: #c9302c; /* Цвет кнопки при наведении */
+}
+.news-item div {
+  margin-bottom: 20px; /* Задайте нужное значение отступа */
+}
+
+.dela-gothic-one-regular {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.news-item h3 {
+  margin: 0;
+}
+
+.text {
+  color: white;
+}
+.news-item p {
+  margin: 5px 0;
+}

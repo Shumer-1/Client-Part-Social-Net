@@ -1,0 +1,31 @@
+<div class="edit-user-container">
+  <h2 class="dela-gothic-one-regular">Редактирование профиля</h2>
+  <button class="logout-button dela-gothic-one-regular" [routerLink]="['/profile', userId]">Выйти</button>
+
+  <!-- Блок для отображения сообщения об ошибке -->
+  <div *ngIf="errorMessage" class="error-message dela-gothic-one-regular">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="successMessage" class="success-message dela-gothic-one-regular">
+    {{ successMessage }}
+  </div>
+
+  <form [formGroup]="editUserForm" (ngSubmit)="onSubmit()" class="edit-user-form">
+    <div class="form-group dela-gothic-one-regular">
+      <label for="name">Имя</label>
+      <input type="text" id="name" formControlName="name" placeholder="Введите ваше имя" required>
+    </div>
+
+    <div class="form-group dela-gothic-one-regular">
+      <label for="email">Почта</label>
+      <input type="email" id="email" formControlName="email" placeholder="Введите вашу почту" required>
+    </div>
+
+    <div class="form-group dela-gothic-one-regular">
+      <label for="photo">Фото</label>
+      <input type="file" id="photo" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+
+    <button type="submit" class="submit-button dela-gothic-one-regular">Сохранить изменения</button>
+  </form>
+</div>

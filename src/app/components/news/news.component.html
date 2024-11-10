@@ -1,0 +1,15 @@
+<div class="news-container">
+  <h2 class="dela-gothic-one-regular">Новости</h2>
+  <button class="logout-button" [routerLink]="['/profile', userId]">Выйти</button>
+  <div class="news-item" *ngIf="newsList.length > 0; else noNews">
+    <div *ngFor="let news of newsList" >
+      <h3 class="dela-gothic-one-regular">Новость</h3>
+      <p class="dela-gothic-one-regular"><strong class="dela-gothic-one-regular">Автор:</strong> {{ getAuthorName(news.author_id) }}</p>
+      <p class="dela-gothic-one-regular"><strong class="dela-gothic-one-regular">Новость:</strong> {{ news.new }}</p>
+      <p class="dela-gothic-one-regular"><strong class="dela-gothic-one-regular">Дата:</strong> {{ news.date | date: 'dd.MM.yyyy' }}</p>
+    </div>
+  </div>
+  <ng-template #noNews>
+    <p>Новостей нет</p>
+  </ng-template>
+</div>

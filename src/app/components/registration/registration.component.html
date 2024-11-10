@@ -1,0 +1,38 @@
+<div class="registration-container">
+  <h2 class="dela-gothic-one-regular">Регистрация</h2>
+  <button class="logout-button dela-gothic-one-regular" routerLink="/">Выйти</button>
+
+  <!-- Блок для отображения сообщения об ошибке -->
+  <div *ngIf="errorMessage" class="error-message dela-gothic-one-regular">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-form">
+    <div class="form-group dela-gothic-one-regular">
+      <label for="name">Имя</label>
+      <input type="text" id="name" formControlName="name" placeholder="Введите ваше имя" required>
+    </div>
+
+    <div class="form-group dela-gothic-one-regular">
+      <label for="email">Почта</label>
+      <input type="email" id="email" formControlName="email" placeholder="Введите вашу почту" required>
+    </div>
+
+    <div class="form-group dela-gothic-one-regular">
+      <label for="password">Пароль</label>
+      <input type="text" id="password" formControlName="password" placeholder="Введите ваш пароль" required>
+    </div>
+
+    <div class="form-group dela-gothic-one-regular">
+      <label for="dob">Дата рождения</label>
+      <input type="date" id="dob" formControlName="dob" required>
+    </div>
+
+    <div class="form-group dela-gothic-one-regular">
+      <label for="photo">Фото</label>
+      <input type="file" id="photo" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+
+    <button type="submit" class="submit-button dela-gothic-one-regular">Зарегистрироваться</button>
+  </form>
+</div>

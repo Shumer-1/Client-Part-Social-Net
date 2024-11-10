@@ -1,0 +1,48 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  text-align: center;
+  background-color: #ea0a91;
+  border-radius: 20px;
+  border-color: #450d73;
+  border-width: 10px;
+}
+
+.dela-gothic-one-regular {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login-input-password {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+.login-input-name {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.text {
+  color: white;
+}
+
+.login-button {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: rgba(112, 85, 97, 0.42);
+  height: 40px;
+  width: 400px;
+  font-size: 20px;
+}
+
+.login-text {
+  font-size: 20px;
+  margin-left: 20px; /* Устанавливаем отступ слева в 20px */
+}

@@ -1,0 +1,23 @@
+<div class="add-friends-container">
+  <h2 class="dela-gothic-one-regular">Управление друзьями</h2>
+  <button class="logout-button" [routerLink]="['/profile', userId]">Вернуться в профиль</button>
+
+  <div class="add-friends-item">
+    <div *ngFor="let user of users">
+      <div class="profile-photo">
+        <img style="margin-top: 10px; max-width: 100px; max-height: 100px; width: auto; height: auto; border-radius: 50%;"
+             [src]="'https://localhost:3000' + user.photo" alt="User Photo">
+      </div>
+      <p class="dela-gothic-one-regular"><strong>Имя:</strong> {{ user.name }}</p>
+      <p class="dela-gothic-one-regular"><strong>Почта:</strong> {{ user.email }}</p>
+      <p class="dela-gothic-one-regular"><strong>Роль:</strong> {{ user.role }}</p>
+      <button *ngIf="isFriend(user.id)" (click)="removeFriend(user.id)" class="remove-friend-button">
+        Удалить из друзей
+      </button>
+      <button *ngIf="!isFriend(user.id)" (click)="addFriend(user.id)" class="add-friend-button">
+        Добавить в друзья
+      </button>
+    </div>
+  </div>
+
+</div>

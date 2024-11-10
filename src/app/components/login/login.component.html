@@ -1,0 +1,14 @@
+<div class="login-container">
+  <h2 class="text">Авторизация</h2>
+  <div>
+    <label class="login-text text" for="username">Имя пользователя:</label>
+    <input class="login-input-name" id="username" type="text" [(ngModel)]="username" placeholder="Введите имя пользователя" />
+  </div>
+  <div>
+    <label class="login-text text" for="password">Пароль:</label>
+    <input class="login-input-password" id="password" type="password" [(ngModel)]="password" placeholder="Введите пароль" />
+  </div>
+  <button class="login-button dela-gothic-one-regular" (click)="onSubmit()">Войти</button>
+  <button class="login-button dela-gothic-one-regular" routerLink="/register">Регистрация</button>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>
