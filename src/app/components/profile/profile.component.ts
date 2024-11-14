@@ -10,9 +10,9 @@ import { UserService } from '../../services/users.service';
 })
 export class ProfileComponent implements OnInit {
   inputValue: string = 'AAAA';
-  userId: number | null = null; // ID пользователя
-  user: User | undefined = undefined; // Объект пользователя
-  friendsList: User[] = []; // Список друзей пользователя
+  userId: number | null = null;
+  user: User | undefined = undefined;
+  friendsList: User[] = [];
   errorMessage: string = '';
   userPhoto: string | undefined = '';
   isAdm: boolean = false;
@@ -24,7 +24,6 @@ export class ProfileComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Получаем ID пользователя из URL
     this.route.params.subscribe(params => {
       this.userId = +params['id'];
       if (this.userId) {
@@ -39,7 +38,6 @@ export class ProfileComponent implements OnInit {
   }
 
 
-  // Метод для загрузки пользователя и его друзей
   loadUserAndFriends(userId: number): void {
     this.userService.getUsers().subscribe(
       (users: User[]) => {
@@ -51,7 +49,7 @@ export class ProfileComponent implements OnInit {
         if (this.user) {
           this.userPhoto = "https://localhost:3000" + this.user?.photo;
           console.log(this.userPhoto);
-          // Найти объекты друзей по идентификаторам из списка друзей пользователя
+
           this.friendsList = users.filter(u => this.user!.friends.includes(u.id));
         } else {
           this.errorMessage = 'Пользователь не найден';

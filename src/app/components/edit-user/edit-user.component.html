@@ -2,7 +2,6 @@
   <h2 class="dela-gothic-one-regular">Редактирование профиля</h2>
   <button class="logout-button dela-gothic-one-regular" [routerLink]="['/profile', userId]">Выйти</button>
 
-  <!-- Блок для отображения сообщения об ошибке -->
   <div *ngIf="errorMessage" class="error-message dela-gothic-one-regular">
     {{ errorMessage }}
   </div>

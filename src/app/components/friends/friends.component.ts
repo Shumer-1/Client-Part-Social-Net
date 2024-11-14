@@ -10,7 +10,7 @@ import {User} from '../../models/user';
   styleUrls: ['./friends.component.css']
 })
 export class FriendsComponent implements OnInit {
-  newsList: any[] = []; // Поле для хранения списка новостей
+  newsList: any[] = [];
   dataParse: any[] = [];
   users: User[] = [];
   friends_id: number[] = [];

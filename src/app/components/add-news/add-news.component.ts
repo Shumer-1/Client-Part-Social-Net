@@ -1,26 +1,25 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {NewsService} from '../../services/news.service'; // Путь к вашему сервису
+import {NewsService} from '../../services/news.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import { io } from 'socket.io-client'; // Импортируем библиотеку socket.io-client
+import { io } from 'socket.io-client';
 
 @Component({
   selector: 'app-add-news',
   templateUrl: './add-news.component.html',
   styleUrls: ['./add-news.component.css']
 })
-export class AddNewsComponent {
+export class AddNewsComponent implements OnInit{
   addNewsForm: FormGroup;
   userId: number = 0;
-  socket: any; // Объявляем socket
+  socket: any;
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.userId = +params['id'];
     }
     );
-    // Инициализация WebSocket соединения
-    this.socket = io('https://localhost:3000'); // Замените на ваш адрес сервера
+    this.socket = io('https://localhost:3000');
   }
 
 
@@ -31,20 +30,15 @@ export class AddNewsComponent {
     });
   }
 
-  // Метод для отправки формы
   onSubmit() {
     if (this.addNewsForm.valid) {
       const newsData = this.addNewsForm.value;
       newsData.author_id = this.userId;
 
-      // Отправляем новость на сервер
       this.newsService.addNews(newsData).subscribe(
         response => {
           console.log('Новость успешно добавлена!', response);
-          // Отправляем новость через WebSocket на сервер для обновления всех клиентов
           this.socket.emit('newNews', newsData);
-
-          // Очистка формы после успешной отправки
           this.addNewsForm.reset();
           this.router.navigate(['/profile', this.userId]);
         },

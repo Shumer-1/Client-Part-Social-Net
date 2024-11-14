@@ -43,7 +43,6 @@ export class AddFriendsComponent implements OnInit {
       this.updateUserFriends();
     }
   }
-  // Метод для обновления списка друзей текущего пользователя
   private updateUserFriends(): void {
     const updatedUser = { id: this.userId, friends: this.friends_id };
     this.userService.updateUserFriends(updatedUser).subscribe(

@@ -10,7 +10,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 })
 export class RegistrationComponent {
   registrationForm: FormGroup;
-  errorMessage: string | null = null; // Сообщение об ошибке
+  errorMessage: string | null = null;
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) {
     this.registrationForm = this.fb.group({
@@ -23,7 +23,7 @@ export class RegistrationComponent {
   }
 
   onSubmit() {
-    this.errorMessage = null; // Сбрасываем сообщение об ошибке
+    this.errorMessage = null;
 
     if (this.registrationForm.valid) {
       const formData = new FormData();

@@ -37,7 +37,7 @@ textarea {
 }
 
 textarea:focus {
-  border-color: #450d73; /* Цвет рамки при фокусе */
+  border-color: #450d73;
   outline: none;
 }
 
@@ -48,7 +48,7 @@ textarea:focus {
 }
 
 .submit-button {
-  background-color: #450d73; /* Цвет кнопки */
+  background-color: #450d73;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -58,7 +58,7 @@ textarea:focus {
 }
 
 .submit-button:hover {
-  background-color: #5f2a8d; /* Цвет кнопки при наведении */
+  background-color: #5f2a8d;
 }
 
 .submit-button:disabled {
@@ -72,7 +72,7 @@ textarea:focus {
   top: 10px;
   right: 10px;
   padding: 8px 12px;
-  background-color: #d9534f; /* Цвет кнопки */
+  background-color: #d9534f;
   color: white;
   border: none;
   border-radius: 5px;
@@ -81,7 +81,7 @@ textarea:focus {
 }
 
 .logout-button:hover {
-  background-color: #c9302c; /* Цвет кнопки при наведении */
+  background-color: #c9302c;
 }
 
 .dela-gothic-one-regular {

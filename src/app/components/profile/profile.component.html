@@ -5,7 +5,7 @@
   <button class="add-news-button" [routerLink]="['/add-news', user.id]">Добавить новость</button>
   <button class="edit-button" [routerLink]="['/edit', user.id]">Редактировать данные</button>
   <button class="add-friends-button" [routerLink]="['/add-friends', user.id]">Добавить/удалить друзей</button>
-  <!-- Кнопка для перехода на localhost:3000, видна только если isTrue равно true -->
+
   <button *ngIf="isAdm" class="external-link-button" (click)="goToExternalLink()">Перейти в администрирование</button>
 
   <div class="profile-photo">

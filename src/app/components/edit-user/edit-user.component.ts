@@ -12,9 +12,9 @@ import {User} from '../../models/user';
 })
 export class EditUserComponent implements OnInit {
   editUserForm: FormGroup;
-  errorMessage: string | null = null; // Сообщение об ошибке
-  successMessage: string | null = null; // Сообщение об успешном обновлении
-  userId: number = 0; // Идентификатор текущего пользователя
+  errorMessage: string | null = null;
+  successMessage: string | null = null;
+  userId: number = 0;
   users: User[] = [];
   user: User | null = null;
 
@@ -33,14 +33,12 @@ export class EditUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Получаем ID пользователя из URL
     this.route.params.subscribe(params => {
       this.userId = +params['id'];
-      this.loadUserData(); // Загружаем данные пользователя
+      this.loadUserData();
     });
   }
 
-  // Метод загрузки данных пользователя
   loadUserData(): void {
     this.userService.getUsers().subscribe(
       (data) => {
@@ -52,7 +50,6 @@ export class EditUserComponent implements OnInit {
     );
   }
 
-  // Метод для обработки отправки формы
   onSubmit() {
     this.errorMessage = null;
     this.successMessage = null;
@@ -60,12 +57,10 @@ export class EditUserComponent implements OnInit {
     if (this.editUserForm.valid) {
       const formData = new FormData();
 
-      // Добавляем обычные поля
       formData.append('id', this.userId.toString());
       formData.append('name', this.editUserForm.get('name')?.value);
       formData.append('email', this.editUserForm.get('email')?.value);
 
-      // Добавляем файл (если выбран)
       const photo = this.editUserForm.get('photo')?.value;
       if (photo) {
         formData.append('photo', photo);
@@ -87,8 +82,6 @@ export class EditUserComponent implements OnInit {
     }
   }
 
-
-  // Метод для обработки выбора файла
   onFileSelected(event: any) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
